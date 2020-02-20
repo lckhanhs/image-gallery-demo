@@ -1,0 +1,43 @@
+.login-component {
+  width: 100%;
+  height: 100vh;
+  margin: auto;
+  background: #f7f7f7;
+  position: relative;
+
+  form {
+    width: 400px;
+    position: absolute;
+    margin: auto;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    background: #FFFFFF;
+    box-shadow: 0 1px 2px #ccc;
+    padding: 40px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .title {
+      font-size: 1.4rem;
+      margin: 12px 0px;
+    }
+    .error{
+      color: #FF0000;
+      height: 1rem;
+      font-size: 1rem;
+      margin-bottom: 12px;
+    }
+    .field {
+      width: 100%;
+    }
+
+    button {
+      width: 40%;
+
+    }
+  }
+}
