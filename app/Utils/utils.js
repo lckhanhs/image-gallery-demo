@@ -1,4 +1,4 @@
-export default Utils = {
+export const Utils = {
   osDetect: () => {
     return {
       getUserAgent: () => {
@@ -8,34 +8,34 @@ export default Utils = {
         return navigator.platform;
       },
       isIos: () => {
-        return /iPhone|iPad|iPod/.test(osDetect.getPlatform());
+        return /iPhone|iPad|iPod/.test(Utils.osDetect().getPlatform());
       },
       isAndroid: () => {
-        return /Android/.test(osDetect.getUserAgent());
+        return /Android/.test(Utils.osDetect().getUserAgent());
       },
       isBlackBerry: () => {
-        return /BlackBerry/.test(osDetect.getPlatform());
+        return /BlackBerry/.test(Utils.osDetect().getPlatform());
       },
       isMac: () => {
-        return /Mac/.test(osDetect.getPlatform());
+        return /Mac/.test(Utils.osDetect().getPlatform());
       },
       isWindows: () => {
-        return /Win/.test(osDetect.getPlatform());
+        return /Win/.test(Utils.osDetect().getPlatform());
       },
       isLinux: () => {
-        return /Linux/.test(osDetect.getPlatform()) && !osDetect.isAndroid();
+        return /Linux/.test(Utils.osDetect().getPlatform()) && !Utils.osDetect().isAndroid();
       },
       get: () => {
-        if (osDetect.isIos()) return "iOS";
-        if (osDetect.isAndroid()) return "Android";
-        if (osDetect.isBlackBerry()) return "BlackBerry";
-        if (osDetect.isMac()) return "Mac";
-        if (osDetect.isWindows()) return "Windows";
-        if (osDetect.isLinux()) return "Linux";
+        if (Utils.osDetect().isIos()) return "iOS";
+        if (Utils.osDetect().isAndroid()) return "Android";
+        if (Utils.osDetect().isBlackBerry()) return "BlackBerry";
+        if (Utils.osDetect().isMac()) return "Mac";
+        if (Utils.osDetect().isWindows()) return "Windows";
+        if (Utils.osDetect().isLinux()) return "Linux";
         return "Unknown";
       },
       isMobile: () => {
-        return osDetect.isAndroid() || osDetect.isBlackBerry() || osDetect.isIos()
+        return Utils.osDetect().isAndroid() || Utils.osDetect().isBlackBerry() || Utils.osDetect().isIos()
       }
     };
   }

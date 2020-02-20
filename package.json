@@ -19,6 +19,7 @@
     "react": "16",
     "react-dom": "16",
     "react-fontawesome": "^1.7.1",
+    "react-infinite-scroll-component": "^5.0.4",
     "react-redux": "^7.2.0",
     "react-router-dom": "^5.1.2",
     "react-semantic-ui": "^0.2.0",

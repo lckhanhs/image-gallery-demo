@@ -4,7 +4,7 @@ import React, { Component } from "react";
 import SideBarComponent from "./side-bar";
 import Cookies from "js-cookie";
 import Navigator from "./navigator";
-import Utils from "../Utils/utils";
+import { Utils } from "../utils/utils";
 
 class PrivateLayout extends Component {
   constructor() {
@@ -17,12 +17,16 @@ class PrivateLayout extends Component {
     }
   }
   render() {
-
     return (
-      <div className={`wrapper${Utils.osDetect().isMobile()?' mobile':''}${Utils.osDetect().get()}`}>
+      <div
+        className={`wrapper${
+          Utils.osDetect().isMobile() ? " mobile" : ""
+        } ${Utils.osDetect().get()}`}
+      >
         {/* <HeaderComponent /> */}
         <SideBarComponent />
-        {this.props.children}
+        <div className="app-content">{this.props.children}</div>
+
         {/* <FooterComponent /> */}
       </div>
     );

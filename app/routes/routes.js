@@ -6,6 +6,7 @@ import Login from "../pages/login";
 // import Error404 from 'src/page/error404'
 import PublicLayout from "../layouts/public-layout";
 import PrivateLayout from "../layouts/private-layout";
+import Home from "../pages/home";
 
 const routeslist = [
   {
@@ -14,7 +15,7 @@ const routeslist = [
   },
   {
     layout: PrivateLayout,
-    subRoutes: [{ exact: true, path: "/", component: null }]
+    subRoutes: [{ exact: true, path: "/", component: Home }]
   }
 ];
 
